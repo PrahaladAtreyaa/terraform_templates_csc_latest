@@ -1,0 +1,11 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - nginx
+write_files:
+  - owner: www-data:www-data
+  - path: /var/www/html/index.html
+    content: |
+        Helllooo Have a Great Day !
+runcmd:
+  - service nginx restart

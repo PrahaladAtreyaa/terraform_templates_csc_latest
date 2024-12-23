@@ -19,7 +19,7 @@ resource "azurerm_public_ip" "tfresource" {
   name                = "${var.vmName}-public-ip"
   resource_group_name = "${var.isNewResourceGroup ? azurerm_resource_group.tfresource[0].name : var.existingResourceGroup}"
   location            = "${var.region}"
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
 }
 
 resource "azurerm_network_interface" "tfresource" {

@@ -1,0 +1,10 @@
+"Metadata": {
+        "SNC::Parameter::Metadata": {
+                "lb_zone": { "datasource": "ServiceNow::Pools::AvailabilityZonePool.getNameByLDC" },
+                "network": { "datasource": "ServiceNow::Pools::NetworkPool.getObjectIdByServiceAccount" },
+                "subnet_id": {
+                        "datasource": "ServiceNow::Pools::SubnetPool.getObjectIdByNetworkLDC",
+                        "datasourceFilter": { "Network": "network" }
+                }
+        }
+}
